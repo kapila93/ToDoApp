@@ -1,5 +1,5 @@
-export class task {
+export class Task {
     id: number;
     text: string;
-    state: boolean;
+    done: boolean;
 }
