@@ -7,6 +7,5 @@ export const TASKS: Task[] = [
     { id: 4, text: 'task 4', done: false},
     { id: 5, text: 'task 5', done: false},
     { id: 6, text: 'task 6', done: false},
-    { id: 7, text: 'task 7', done: false},
-
-]
+    { id: 7, text: 'task 7', done: false}
+];
