@@ -36,6 +36,7 @@ export class EditTaskComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        // get id from url and get the task from Task Service
         this.route.params
         .switchMap((params: Params) => 
         this.taskService.getTask(+params['id']))

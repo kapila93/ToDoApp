@@ -1,9 +1,9 @@
 <div class="container">
     <h4>Edit Task</h4>
-<form>
+<form *ngIf="task">
   <div class="form-group">
     <label>Task</label>
-    <input [(ngModel)]="task.text" [ngModelOptions]="{standalone: true}" class="form-control">
+    <input value="{{ task.text }}" #taskText class="form-control">
   </div>
   <div class="form-group">
     <label>Notes</label>
