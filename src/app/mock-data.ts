@@ -1,11 +1,11 @@
 import { Task } from './task';
 
-export const TASKS: Task[] = [
-    { id: 1, text: 'task 1', done: true},
-    { id: 2, text: 'task 2', done: true},
-    { id: 3, text: 'task 3', done: true},
-    { id: 4, text: 'task 4', done: false},
-    { id: 5, text: 'task 5', done: false},
-    { id: 6, text: 'task 6', done: false},
-    { id: 7, text: 'task 7', done: false}
+export var TASKS: Task[] = [
+    { id: 1, text: 'Wash the stones in the backyard', note: "", done: true},
+    { id: 2, text: 'Count the sheep', note: "Oh my! This one has a note!", done: false},
+    { id: 3, text: 'Paint the dog black', note: "", done: true},
+    { id: 4, text: 'Fluff the pillows', note: "Oh my! This one has a note!", done: false},
+    { id: 5, text: "Enrage the neighbour's dogs", note: "Oh my! This one has a note!", done: true},
+    { id: 6, text: 'Count the sheep, again', note: "", done: false},
+    { id: 7, text: 'Play with the yordle', note: "", done: false}
 ];

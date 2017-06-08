@@ -1,0 +1,19 @@
+<div class="container">
+    <h4>Pending Tasks</h4>
+
+<div class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let task of tasks" (click)="onSelect(task)" [class.list-group-item-info]="task === selectedTask">  
+        <button class="btn btn-danger px-2 mr-2" (click)="done(task); $event.stopPropagation()">✗</button>
+        {{ task.text }}
+    </a>
+</div>
+
+<task-detail [task]="selectedTask"></task-detail>
+
+
+<br>
+  <button class="btn btn-secondary" routerLink="/add" routerLinkActive="active">
+    Add New Task
+  </button>
+
+</div>

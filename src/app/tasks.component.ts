@@ -7,13 +7,13 @@ import { TaskService } from './task.service';
 import { TASKS } from './mock-data';
 @Component({
     providers: [TaskService],
-    selector: 'finished-tasks',
-    templateUrl: './finished-tasks.component.html',
-    styleUrls: ['./finished-tasks.component.css'],
+    selector: 'tasks',
+    templateUrl: './tasks.component.html',
+    styleUrls: ['./tasks.component.css'],
 })
 
-export class FinishedTasksComponent implements OnInit {
-    // FINISHED TASKS COMPONENT gives a list of completed tasks
+export class TasksComponent implements OnInit {
+    // TASKS COMPONENT
     tasks: Task[];
     selectedTask: Task;
 
@@ -26,14 +26,20 @@ export class FinishedTasksComponent implements OnInit {
         this.selectedTask = task;
     }
     getTasks(): void {
-        this.taskService.getTasks(false).then(tasks => this.tasks = tasks);
-        //console.log("hello");
+        this.taskService.getTasks().then(tasks => this.tasks = tasks);
+    }
+
+    done(task: Task): void { 
+        this.taskService.finishTask(task.id, true)
+        .then(() => {
+           // this.tasks = this.tasks.filter(t => t !== task);
+        });
     }
 
     undone(task: Task): void { 
         this.taskService.finishTask(task.id, false)
         .then(() => {
-            this.tasks = this.tasks.filter(t => t !== task);
+            // this.tasks = this.tasks.filter(t => t !== task);
         });
     }
     
