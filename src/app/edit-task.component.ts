@@ -28,10 +28,12 @@ export class EditTaskComponent implements OnInit {
         this.location.back();
     }
         
-    save(text: string): void {
+    save(text: string, note: string): void {
         text = text.trim();
+        note = note.trim();
         if (!text) {return;}
         this.task.text = text;
+        this.task.note = note;
         this.taskService.updateTask(this.task).then(() => this.goBack());
     }
 

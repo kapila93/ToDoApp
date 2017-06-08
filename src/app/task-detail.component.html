@@ -3,7 +3,7 @@
     <h4 class="card-title">Task</h4>
     <h6 class="card-subtitle mb-2 text-muted">{{ task.text }}</h6>
     <p class="card-text">{{ task.note }}</p>
-    <a (click)="gotoEdit()" class="card-link">Edit</a>
-    <a href="#" class="card-link">Delete</a>
+    <button class="btn btn-link" (click)="gotoEdit()">Edit</button>
+    <button class="btn btn-link">Delete</button>
   </div>
 </div>

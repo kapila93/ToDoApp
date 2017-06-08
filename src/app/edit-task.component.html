@@ -7,11 +7,11 @@
   </div>
   <div class="form-group">
     <label>Notes</label>
-    <textarea class="form-control" rows="2" ></textarea>
+    <textarea class="form-control" rows="2" #taskNote>{{ task.note }}</textarea>
     <small class="form-text text-muted">Optional</small>
   </div>
-  <button (click)="save(taskText.value); taskText.value=''" class="btn btn-primary">Edit Task</button>
+  <button (click)="save(taskText.value, taskNote.value); taskText.value=''; taskNote.value=''" class="btn btn-primary">Edit Task</button>
   <button type="submit" class="btn btn-danger">Delete Task</button>
-  <a (click)="goBack()" type="submit" class="btn btn-default">Go Back</a>
+  <a (click)="goBack()" type="submit" class="btn btn-secondary">Go Back</a>
 </form>
 </div>
