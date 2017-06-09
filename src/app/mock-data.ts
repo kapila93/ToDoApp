@@ -1,3 +1,6 @@
+// some mock data for testing purposes. 
+// this will be unncessary after persistant storage
+
 import { Task } from './task';
 
 export var TASKS: Task[] = [

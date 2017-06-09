@@ -1,3 +1,4 @@
+// TASKS COMPONENT - displays a list of all tasks
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -25,6 +26,7 @@ export class TasksComponent implements OnInit {
     onSelect(task: Task): void {
         this.selectedTask = task;
     }
+    
     getTasks(): void {
         this.taskService.getTasks().then(tasks => this.tasks = tasks);
     }

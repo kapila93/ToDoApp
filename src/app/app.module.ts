@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import {WebStorageModule, LocalStorageService} from "angular2-localstorage";
+
 import { AppComponent } from './app.component';
 import { FinishedTasksComponent } from './finished-tasks.component';
 import { PendingTasksComponent } from './pending-tasks.component';
@@ -27,9 +29,12 @@ import { TaskService } from './task.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [TaskService],
+  providers: [
+    TaskService,
+    LocalStorageService
+  ],
   bootstrap: [AppComponent]
 })
 

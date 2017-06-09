@@ -33,13 +33,6 @@ export class PendingTasksComponent implements OnInit {
         this.router.navigate(['/detail', this.selectedTask.id]);
     }
 
-    add(text: string): void { 
-        text = text.trim();
-        if (!text) { return; }
-        this.taskService.createTask(text);        
-    }
-
-
     updateTasks(task: Task): void {
         this.tasks = this.tasks.filter(t => t !== task);
         if (this.selectedTask === task) {this.selectedTask = null};
